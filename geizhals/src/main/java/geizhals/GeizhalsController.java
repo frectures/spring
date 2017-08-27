@@ -15,6 +15,7 @@ public class GeizhalsController {
 		// fill the model
 		model.addAttribute("allProducts", geizhalsService.allProducts());
 		model.addAttribute("allDiscounters", geizhalsService.allDiscounters());
+		model.addAttribute("allPrices", geizhalsService.allPriceInfosByProductAndDiscounter());
 
 		// forward to the view
 		return "Geizhals";

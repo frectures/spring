@@ -22,7 +22,7 @@
 		<tr>
 			<td><c:out value="${product}" /></td>
 			<c:forEach items="${allDiscounters}" var="discounter">
-				<td>?</td>
+				<td><c:out value="${allPrices[product][discounter].price}" /></td>
 			</c:forEach>
 		</tr>
 	</c:forEach>
