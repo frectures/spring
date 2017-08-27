@@ -1,8 +1,8 @@
 package geizhals;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,9 +16,11 @@ public class GeizhalsServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
-		out.println("<html><head><title>Geizhals</title></head><body>");
-		out.println("<h2>Hello World</h2>");
-		out.println("</body></html>");
+		// fill the model
+		request.setAttribute("greetee", "World");
+
+		// forward to the view
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Geizhals.jsp");
+		dispatcher.forward(request, response);
 	}
 }
