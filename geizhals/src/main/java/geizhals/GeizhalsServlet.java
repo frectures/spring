@@ -17,7 +17,7 @@ public class GeizhalsServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// fill the model
-		request.setAttribute("greetee", "World");
+		request.setAttribute("greetees", new String[] { "Alice", "Bob", "Carol" });
 
 		// forward to the view
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Geizhals.jsp");
