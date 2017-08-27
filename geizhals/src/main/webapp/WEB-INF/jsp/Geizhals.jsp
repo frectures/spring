@@ -10,21 +10,33 @@
 </head>
 <body>
 
-<h2>Hello to my
-	<c:if test="${isFormal}">acquaintances</c:if>
-	<c:if test="${not isFormal}">buddies</c:if>
-</h2>
-<ul>
-	<c:forEach items="${greetees}" var="greetee">
-		<li><c:out value="${greetee}" /></li>
-	</c:forEach>
-</ul>
-
-<h2>Add greetee</h2>
-<form method='post'>
-<input type='text' name='newGreetee' size='20' />
-<input type='submit' />
-</form>
+<h2>Price Infos</h2>
+<table style="border:2px solid black; border-spacing:20px">
+	<tr>
+		<th></th>
+		<th>Discounter1</th>
+		<th>Discounter2</th>
+		<th>Discounter3</th>
+	</tr>
+	<tr>
+		<th>Product1</th>
+		<td>?</td>
+		<td>?</td>
+		<td>?</td>
+	</tr>
+	<tr>
+		<th>Product2</th>
+		<td>?</td>
+		<td>?</td>
+		<td>?</td>
+	</tr>
+	<tr>
+		<th>Product3</th>
+		<td>?</td>
+		<td>?</td>
+		<td>?</td>
+	</tr>
+</table>
 
 </body>
 </html>
