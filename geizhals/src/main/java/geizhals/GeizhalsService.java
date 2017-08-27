@@ -8,12 +8,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
+import org.springframework.stereotype.Service;
+
 import persistence.PriceInfo;
-import persistence.PriceInfoRepositoryDb;
 import persistence.Repository;
 
+@Service
 public class GeizhalsService {
-	private final Repository<PriceInfo> priceInfos = new PriceInfoRepositoryDb();
+	private final Repository<PriceInfo> priceInfos;
+
+	public GeizhalsService(Repository<PriceInfo> priceInfos) {
+		this.priceInfos = priceInfos;
+	}
 
 	public List<PriceInfo> allPriceInfos() {
 		return priceInfos.findAll();
@@ -39,6 +45,6 @@ public class GeizhalsService {
 	}
 
 	private static PriceInfo betterPrice(PriceInfo a, PriceInfo b) {
-		return (a.getPrice() > b.getPrice()) ? a : b;
+		return (a.getPrice() < b.getPrice()) ? a : b;
 	}
 }

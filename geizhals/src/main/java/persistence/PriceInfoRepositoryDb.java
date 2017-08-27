@@ -2,6 +2,7 @@ package persistence;
 
 import java.util.Random;
 
+@org.springframework.stereotype.Repository
 public class PriceInfoRepositoryDb extends RepositoryDb<PriceInfo> {
 	private static final String[] initialDiscounters = { "All Die", "Liedel", "Penner" };
 	private static final Random rng = new Random();

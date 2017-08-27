@@ -22,7 +22,12 @@
 		<tr>
 			<td><c:out value="${product}" /></td>
 			<c:forEach items="${allDiscounters}" var="discounter">
-				<td><c:out value="${allPrices[product][discounter].price}" /></td>
+				<c:if test="${allPrices[product][discounter].price == cheapestPrices[product].price}">
+					<td style="color:blue"><c:out value="${allPrices[product][discounter].price}" /></td>
+				</c:if>
+				<c:if test="${allPrices[product][discounter].price != cheapestPrices[product].price}">
+					<td><c:out value="${allPrices[product][discounter].price}" /></td>
+				</c:if>
 			</c:forEach>
 		</tr>
 	</c:forEach>
