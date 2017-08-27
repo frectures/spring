@@ -20,5 +20,11 @@
 	</c:forEach>
 </ul>
 
+<h2>Add greetee</h2>
+<form method='post'>
+<input type='text' name='newGreetee' size='20' />
+<input type='submit' />
+</form>
+
 </body>
 </html>
