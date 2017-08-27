@@ -17,6 +17,7 @@ public class GeizhalsServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// fill the model
+		request.setAttribute("isFormal", true);
 		request.setAttribute("greetees", new String[] { "Alice", "Bob", "Carol" });
 
 		// forward to the view

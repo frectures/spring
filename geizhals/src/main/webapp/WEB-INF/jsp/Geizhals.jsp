@@ -10,7 +10,10 @@
 </head>
 <body>
 
-<h2>Hello to my buddies</h2>
+<h2>Hello to my
+	<c:if test="${isFormal}">acquaintances</c:if>
+	<c:if test="${not isFormal}">buddies</c:if>
+</h2>
 <ul>
 	<c:forEach items="${greetees}" var="greetee">
 		<li><c:out value="${greetee}" /></li>
