@@ -14,28 +14,18 @@
 <table style="border:2px solid black; border-spacing:20px">
 	<tr>
 		<th></th>
-		<th>Discounter1</th>
-		<th>Discounter2</th>
-		<th>Discounter3</th>
+		<c:forEach items="${allDiscounters}" var="discounter">
+			<th><c:out value="${discounter}" /></th>
+		</c:forEach>
 	</tr>
-	<tr>
-		<th>Product1</th>
-		<td>?</td>
-		<td>?</td>
-		<td>?</td>
-	</tr>
-	<tr>
-		<th>Product2</th>
-		<td>?</td>
-		<td>?</td>
-		<td>?</td>
-	</tr>
-	<tr>
-		<th>Product3</th>
-		<td>?</td>
-		<td>?</td>
-		<td>?</td>
-	</tr>
+	<c:forEach items="${allProducts}" var="product">
+		<tr>
+			<td><c:out value="${product}" /></td>
+			<c:forEach items="${allDiscounters}" var="discounter">
+				<td>?</td>
+			</c:forEach>
+		</tr>
+	</c:forEach>
 </table>
 
 </body>
