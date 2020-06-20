@@ -1,26 +1,26 @@
 # Vorbereitung
 
-## Eclipse [Download](http://www.eclipse.org/downloads/eclipse-packages)
+## Eclipse [Download](https://www.eclipse.org/downloads/packages)
 ```
 Download Eclipse IDE for Java EE Developers 64 bit
 Extract contents to home directory
 ```
 
-## Tomcat [Download](http://tomcat.apache.org/download-80.cgi)
+## Tomcat [Download](https://tomcat.apache.org/download-90.cgi)
 ```
-Download 8.5.20 / Binary Distributions / Core / zip
+Binary Distributions / Core / zip
 Extract contents to home directory
 
-Optionally download 8.5.20 / Source Code Distributions / zip
+Optionally download Source Code Distributions / zip
 Move (NOT extract!) zip into tomcat directory
 ```
 
 ## Configure Tomcat in Eclipse
 ```
 Window / Preferences / Server / Runtime Environments / Add...
-Select the type of runtime environment: Apache Tomcat v8.5
+Select the type of runtime environment: Apache Tomcat v9.0
 Next
-Tomcat installation directory: /home/fred/apache-tomcat-8.5.20
+Tomcat installation directory: /home/fred/apache-tomcat-9.0
 Finish
 Apply and Close
 
@@ -29,7 +29,7 @@ Server / Servers
 Open
 
 No servers are available. Click this link to create a new server...
-Select the server type: Tomcat v8.5 Server
+Select the server type: Tomcat v9.0 Server
 Finish
 ```
 
